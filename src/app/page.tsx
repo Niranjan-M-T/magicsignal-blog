@@ -16,15 +16,7 @@ export default async function Home() {
         </div>
         <h1 style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '0.5rem', fontSize: 'clamp(2.5rem, 8vw, 4rem)', fontWeight: '800', letterSpacing: '-0.05em', marginBottom: '1.5rem', color: 'var(--foreground)' }}>
           <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="var(--primary)" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" style={{ flexShrink: 0 }}>
-            <path d="M20 21v-8a2 2 0 0 0-2-2H6a2 2 0 0 0-2 2v8" />
-            <path d="M4 16s.5-1 2-1 2.5 2 4 2 2.5-2 4-2 2.5 2 4 2 2-1 2-1" />
-            <path d="M2 21h20" />
-            <path d="M7 8v3" />
-            <path d="M12 8v3" />
-            <path d="M17 8v3" />
-            <path d="M7 4h.01" />
-            <path d="M12 4h.01" />
-            <path d="M17 4h.01" />
+            <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2" />
           </svg>
           Magic Signal
         </h1>
