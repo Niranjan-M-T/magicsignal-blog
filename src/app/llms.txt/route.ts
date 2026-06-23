@@ -1,7 +1,7 @@
 import { client } from '@/sanity/lib/client'
 import { ALL_POSTS_QUERY } from '@/sanity/lib/queries'
 
-export const revalidate = 3600 // Revalidate every hour
+export const revalidate = 60 // Revalidate every minute
 
 export async function GET() {
   const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'http://localhost:3000'

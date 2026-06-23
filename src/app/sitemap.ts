@@ -2,6 +2,8 @@ import { MetadataRoute } from 'next'
 import { client } from '@/sanity/lib/client'
 import { POSTS_SLUGS_QUERY } from '@/sanity/lib/queries'
 
+export const revalidate = 60
+
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'http://localhost:3000'
   
