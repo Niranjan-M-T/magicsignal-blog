@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import { SerpPreview } from '@/components/serp-preview'
+import { Search } from 'lucide-react'
 
 export const metadata: Metadata = {
   title: 'Free Google SERP Preview Tool — Desktop & Mobile',
@@ -51,7 +52,7 @@ export default function SerpPreviewPage() {
                 { title: 'Competitive Edge', desc: 'Most marketers never preview their SERP listings. By optimizing yours, you stand out among competitors who leave their titles to chance.' },
               ].map(f => (
                 <div key={f.title} className="feature-card">
-                  <h3>🔍 {f.title}</h3>
+                  <h3><Search size={20} color="var(--primary)" /> {f.title}</h3>
                   <p>{f.desc}</p>
                 </div>
               ))}

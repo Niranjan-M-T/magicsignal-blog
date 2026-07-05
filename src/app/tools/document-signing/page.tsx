@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
+import { PenSquare, CheckCircle2, ClipboardList } from 'lucide-react'
 
 export const metadata: Metadata = {
   title: 'Free Online Document Signing — No Signup, No Watermarks',
@@ -32,7 +33,9 @@ export default function DocumentSigningPage() {
             backgroundColor: 'rgba(168, 85, 247, 0.03)',
             marginBottom: '4rem',
           }}>
-            <div style={{ fontSize: '4rem', marginBottom: '1.5rem' }}>✒️</div>
+            <div style={{ display: 'flex', justifyContent: 'center', marginBottom: '1.5rem', color: 'var(--foreground)' }}>
+              <PenSquare size={64} strokeWidth={1} />
+            </div>
             <h2 style={{ fontSize: '1.75rem', fontWeight: '800', marginBottom: '1rem' }}>
               Ready to Sign Your Document?
             </h2>
@@ -84,7 +87,7 @@ export default function DocumentSigningPage() {
                 { title: 'Legally Binding', desc: 'Electronic signatures are legally recognized under the ESIGN Act (US), eIDAS (EU), and IT Act (India). Our signatures meet these legal standards.' },
               ].map(f => (
                 <div key={f.title} className="feature-card">
-                  <h3>✅ {f.title}</h3>
+                  <h3><CheckCircle2 size={20} color="var(--primary)" /> {f.title}</h3>
                   <p>{f.desc}</p>
                 </div>
               ))}
@@ -102,7 +105,7 @@ export default function DocumentSigningPage() {
                 { title: 'Students & Educators', desc: 'Sign consent forms, application documents, and academic papers. No printer needed — sign right from your phone.' },
               ].map(f => (
                 <div key={f.title} className="feature-card">
-                  <h3>📋 {f.title}</h3>
+                  <h3><ClipboardList size={20} color="var(--primary)" /> {f.title}</h3>
                   <p>{f.desc}</p>
                 </div>
               ))}

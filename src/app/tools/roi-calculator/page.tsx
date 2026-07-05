@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import { RoiCalculator } from '@/components/roi-calculator'
+import { Zap } from 'lucide-react'
 
 export const metadata: Metadata = {
   title: 'Free Ad Spend Forecaster & ROI Calculator (D2C & B2B)',
@@ -67,7 +68,7 @@ export default function RoiCalculatorPage() {
                 { title: 'Advanced P&L Mode', desc: 'Toggle advanced mode to include agency fees, CPC, conversion rates, and LTV for a complete profitability projection.' },
               ].map(f => (
                 <div key={f.title} className="feature-card">
-                  <h3>⚡ {f.title}</h3>
+                  <h3><Zap size={20} color="var(--primary)" /> {f.title}</h3>
                   <p>{f.desc}</p>
                 </div>
               ))}

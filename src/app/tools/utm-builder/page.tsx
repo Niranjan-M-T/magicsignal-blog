@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import { UtmBuilder } from '@/components/utm-builder'
+import { Link2 } from 'lucide-react'
 
 export const metadata: Metadata = {
   title: 'Free UTM Builder + QR Code Generator',
@@ -51,7 +52,7 @@ export default function UtmBuilderPage() {
                 { title: 'Bridge Online & Offline', desc: 'QR codes with UTM tags let you track offline campaigns (print, events, packaging) right inside Google Analytics. No more guessing.' },
               ].map(f => (
                 <div key={f.title} className="feature-card">
-                  <h3>🔗 {f.title}</h3>
+                  <h3><Link2 size={20} color="var(--primary)" /> {f.title}</h3>
                   <p>{f.desc}</p>
                 </div>
               ))}

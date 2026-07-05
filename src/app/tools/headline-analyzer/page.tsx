@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import { HeadlineAnalyzer } from '@/components/headline-analyzer'
+import { PenTool } from 'lucide-react'
 
 export const metadata: Metadata = {
   title: 'Free Headline Analyzer — Score Your Copy for Conversions',
@@ -53,7 +54,7 @@ export default function HeadlineAnalyzerPage() {
                 { title: 'SEO Title Tags', desc: 'Google ranks pages partly by click-through rate. A compelling title tag that gets more clicks can outrank competitors with more backlinks.' },
               ].map(f => (
                 <div key={f.title} className="feature-card">
-                  <h3>📝 {f.title}</h3>
+                  <h3><PenTool size={20} color="var(--primary)" /> {f.title}</h3>
                   <p>{f.desc}</p>
                 </div>
               ))}

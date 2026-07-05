@@ -2,6 +2,7 @@ import { client } from '@/sanity/lib/client'
 import { ALL_POSTS_QUERY } from '@/sanity/lib/queries'
 import { urlForImage } from '@/sanity/lib/image'
 import Link from 'next/link'
+import { BarChart3, PenTool, Search, Link2, PenSquare } from 'lucide-react'
 
 export const revalidate = 60
 
@@ -10,31 +11,31 @@ const TOOLS = [
     name: 'Marketing ROI Calculator',
     description: 'Calculate projected revenue, ROAS, and cost per acquisition before spending a single dollar on ads. Supports both D2C and B2B models.',
     href: '/tools/roi-calculator',
-    icon: '📊',
+    icon: <BarChart3 size={24} />,
   },
   {
     name: 'Headline & Copy Analyzer',
     description: 'Score your headlines for emotional impact, readability, and conversion potential using proven copywriting frameworks.',
     href: '/tools/headline-analyzer',
-    icon: '✍️',
+    icon: <PenTool size={24} />,
   },
   {
     name: 'SEO SERP Preview',
     description: 'See exactly how your page will appear in Google search results on both desktop and mobile. Catch truncation before it goes live.',
     href: '/tools/serp-preview',
-    icon: '🔍',
+    icon: <Search size={24} />,
   },
   {
     name: 'UTM Builder + QR Generator',
     description: 'Create perfectly tagged campaign URLs and instantly generate downloadable QR codes for offline and print marketing.',
     href: '/tools/utm-builder',
-    icon: '🔗',
+    icon: <Link2 size={24} />,
   },
   {
     name: 'Free Document Signing',
     description: 'Sign PDFs and documents online for free. No signup, no watermarks, legally binding electronic signatures in seconds.',
     href: '/tools/document-signing',
-    icon: '✒️',
+    icon: <PenSquare size={24} />,
   },
 ]
 
@@ -93,7 +94,7 @@ export default async function Home() {
             {TOOLS.map((tool) => (
               <Link key={tool.href} href={tool.href} className="tool-card">
                 <div className="tool-card-icon">
-                  <span style={{ fontSize: '1.5rem' }}>{tool.icon}</span>
+                  {tool.icon}
                 </div>
                 <h3>{tool.name}</h3>
                 <p>{tool.description}</p>

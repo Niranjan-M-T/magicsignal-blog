@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
+import { BarChart3, PenTool, Search, Link2, PenSquare } from 'lucide-react'
 
 export const metadata: Metadata = {
   title: 'Free Marketing Tools — No Signup, No Limits',
@@ -12,35 +13,35 @@ const TOOLS = [
     name: 'Marketing ROI Calculator',
     description: 'Work backward from your revenue goal to calculate the exact ad spend you need. Supports both E-Commerce (D2C) and Lead Generation (B2B) models with break-even ROAS calculations.',
     href: '/tools/roi-calculator',
-    icon: '📊',
+    icon: <BarChart3 size={24} />,
     tags: ['Ads', 'Strategy', 'Finance'],
   },
   {
     name: 'Headline & Copy Analyzer',
     description: 'Score your headlines for emotional impact, readability, power words, and conversion potential. Uses frameworks from the world\'s best copywriters.',
     href: '/tools/headline-analyzer',
-    icon: '✍️',
+    icon: <PenTool size={24} />,
     tags: ['Copywriting', 'Content', 'CRO'],
   },
   {
     name: 'SEO SERP Preview Tool',
     description: 'Visualize how your page appears in Google search results. Preview on desktop and mobile, catch title and description truncation, and optimize click-through rates.',
     href: '/tools/serp-preview',
-    icon: '🔍',
+    icon: <Search size={24} />,
     tags: ['SEO', 'Search', 'Web'],
   },
   {
     name: 'UTM Builder + QR Generator',
     description: 'Create perfectly tagged campaign URLs with UTM parameters and instantly generate downloadable QR codes. Perfect for print, events, and offline marketing.',
     href: '/tools/utm-builder',
-    icon: '🔗',
+    icon: <Link2 size={24} />,
     tags: ['Analytics', 'Tracking', 'Print'],
   },
   {
     name: 'Free Document Signing',
     description: 'Sign PDFs and documents online — completely free. No watermarks, no limits, legally binding electronic signatures. No account required.',
     href: '/tools/document-signing',
-    icon: '✒️',
+    icon: <PenSquare size={24} />,
     tags: ['Documents', 'Legal', 'Productivity'],
   },
 ]
@@ -65,7 +66,7 @@ export default function ToolsPage() {
             {TOOLS.map((tool) => (
               <Link key={tool.href} href={tool.href} className="tool-card">
                 <div className="tool-card-icon">
-                  <span style={{ fontSize: '1.5rem' }}>{tool.icon}</span>
+                  {tool.icon}
                 </div>
                 <div style={{ display: 'flex', gap: '0.5rem', flexWrap: 'wrap', marginBottom: '0.75rem' }}>
                   {tool.tags.map(tag => (

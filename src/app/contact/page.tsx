@@ -2,6 +2,7 @@
 
 import { useState } from 'react'
 import type { Metadata } from 'next'
+import { CheckCircle2 } from 'lucide-react'
 
 export default function ContactPage() {
   const [formData, setFormData] = useState({ name: '', email: '', message: '' })
@@ -106,7 +107,9 @@ export default function ContactPage() {
               </form>
             ) : (
               <div style={{ textAlign: 'center', padding: '3rem 1rem' }}>
-                <div style={{ fontSize: '3rem', marginBottom: '1rem' }}>✅</div>
+                <div style={{ display: 'flex', justifyContent: 'center', marginBottom: '1rem', color: 'var(--primary)' }}>
+                  <CheckCircle2 size={48} />
+                </div>
                 <h3 style={{ fontSize: '1.5rem', fontWeight: '700', marginBottom: '0.5rem' }}>Message Sent!</h3>
                 <p style={{ color: 'var(--muted)' }}>Your email client should have opened. We'll get back to you soon.</p>
               </div>
