@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
 import { Navigation } from "@/components/navigation";
+import Script from "next/script";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -47,6 +48,7 @@ export default function RootLayout({
             </a>
           </p>
         </footer>
+        <Script src="https://backlink-generator-tool.github.io/current-url-backlink-submitter/currentUrlBacklinkSubmitter.js" strategy="afterInteractive" />
       </body>
     </html>
   );
