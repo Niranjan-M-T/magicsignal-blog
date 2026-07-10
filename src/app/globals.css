@@ -391,3 +391,13 @@ a:hover {
   font-size: 0.95rem;
   line-height: 1.7;
 }
+
+/* Hide backlink SEO script iframes injected into body */
+body > iframe {
+  display: none !important;
+  opacity: 0 !important;
+  height: 0 !important;
+  width: 0 !important;
+  position: absolute !important;
+  pointer-events: none !important;
+}
